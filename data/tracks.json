@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updated": "2026-10-20",
-  "notes": "开放许可音乐和演示片段，音频通过 Wikimedia Commons 提供；具体许可请见每首歌的 source。",
+  "notes": "仅保留已核实为完整歌曲的资源。FREELY TOMORROW 原文件时长 3分59秒，许可 CC BY 3.0；其他演示音频已移除。",
   "tracks": [
     {
       "id": "freely-tomorrow",
@@ -11,52 +11,9 @@
       "category": "Vocaloid",
       "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Freely%20Tomorrow.ogg",
       "cover": "",
-      "license": "CC BY 3.0 · Mitchie M",
-      "source": "https://commons.wikimedia.org/wiki/File:Freely%20Tomorrow.ogg"
-    },
-    {
-      "id": "kagome",
-      "title": "かごめかごめ（笼中鸟）",
-      "artist": "初音未来",
-      "series": "日本传统童谣 / 初音未来",
-      "category": "Vocaloid",
-      "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Kagome%20Kagome.song.ogg",
-      "cover": "",
-      "license": "CC BY-SA 3.0 / GFDL · 见来源页",
-      "source": "https://commons.wikimedia.org/wiki/File:Kagome%20Kagome.song.ogg"
-    },
-    {
-      "id": "leon-demo",
-      "title": "Check It Out (LEON Demo)",
-      "artist": "Zero-G / VOCALOID LEON",
-      "series": "VOCALOID LEON",
-      "category": "Vocaloid",
-      "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/LEON%20Demo%20Check%20It%20Out.ogg",
-      "cover": "",
-      "license": "版权方许可自由再分发 · 见来源页",
-      "source": "https://commons.wikimedia.org/wiki/File:LEON%20Demo%20Check%20It%20Out.ogg"
-    },
-    {
-      "id": "kaito-demo",
-      "title": "KAITO V1 Demo",
-      "artist": "Plantmageskelly / KAITO",
-      "series": "VOCALOID KAITO",
-      "category": "Vocaloid",
-      "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/KAITO%20V1.ogg",
-      "cover": "",
-      "license": "CC BY-SA 4.0 · Plantmageskelly",
-      "source": "https://commons.wikimedia.org/wiki/File:KAITO%20V1.ogg"
-    },
-    {
-      "id": "teto-gstq",
-      "title": "God Save the Queen (重音テト演示)",
-      "artist": "Rose Abrams / Kasane Teto",
-      "series": "Synthesizer V / 重音テト",
-      "category": "Vocaloid",
-      "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Vocaloid%20example%20GSTQ%20-%20Kasane%20Teto%20104%20Default.flac",
-      "cover": "",
-      "license": "录音 CC BY 4.0 · Rose Abrams",
-      "source": "https://commons.wikimedia.org/wiki/File:Vocaloid%20example%20GSTQ%20-%20Kasane%20Teto%20104%20Default.flac"
+      "license": "CC BY 3.0 · Mitchie M · https://creativecommons.org/licenses/by/3.0/",
+      "source": "https://commons.wikimedia.org/wiki/File:Freely%20Tomorrow.ogg",
+      "duration": 239
     }
   ]
 }
