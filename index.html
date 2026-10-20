@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>星音档案 · 二次元音乐库</title>
+<style>
+:root{color-scheme:dark;font-family:Inter,"Microsoft Yahei",sans-serif;background:#0d1020;color:#edf0ff}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 75% 0,#262144 0,transparent 50%),#0d1020}
+header{padding:28px max(24px,calc((100vw - 1120px)/2));display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;border-bottom:1px solid #ffffff12}
+.brand{font-size:24px;font-weight:800;letter-spacing:1px}.brand span{color:#f89bd9}.sub{font-size:12px;color:#9ba4c1;margin-top:5px}
+main{max-width:1120px;margin:auto;padding:36px 24px 160px}.hero{border:1px solid #ffffff20;border-radius:26px;padding:34px;background:linear-gradient(120deg,#3b2959aa,#202b4e99);margin-bottom:25px}
+h1{font-size:clamp(27px,4vw,46px);margin:0 0 10px}p{color:#b6c0da;line-height:1.75}
+.actions{display:flex;gap:12px;flex-wrap:wrap}.button{border:1px solid #ffffff27;border-radius:13px;background:#ffffff12;color:#fff;padding:11px 18px;cursor:pointer;font-size:14px}
+.button:hover,.chip:hover{border-color:#f49bd5;background:#ffffff20}.accent{background:#e174b8;color:#190e27;border-color:transparent;font-weight:700}
+.toolbar{display:flex;gap:15px;justify-content:space-between;align-items:center;flex-wrap:wrap;margin:24px 0}
+input[type=search]{background:#1d2239;border:1px solid #ffffff20;padding:13px 15px;border-radius:13px;color:white;min-width:min(100%,280px);outline:none}
+.chips{display:flex;gap:9px;flex-wrap:wrap}.chip{background:#22243c;color:#c5cee6;border:1px solid #ffffff16;border-radius:30px;padding:9px 15px;cursor:pointer}
+.chip.active{background:#d97fbc;color:#171125;border-color:transparent}
+.stats{font-size:13px;color:#9ba4c1}
+.tracks{display:grid;gap:10px}.track{display:grid;grid-template-columns:56px minmax(0,1fr) auto;align-items:center;gap:16px;border:1px solid #ffffff14;background:#171a2de0;border-radius:16px;padding:12px 18px;cursor:pointer}.track:hover,.track.active{border-color:#d77ec0;background:#24223c}
+.cover{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,#d67ac6,#5c79c6);display:grid;place-items:center;font-size:24px}.title{font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.meta{font-size:12px;color:#9da6c5;margin-top:7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.empty{border:1px dashed #ffffff29;border-radius:18px;padding:45px 20px;text-align:center;color:#abb4d1}.empty strong{color:#fff;display:block;font-size:18px;margin:0 0 10px}
+.player{position:fixed;bottom:0;left:0;right:0;z-index:10;background:#17182af5;backdrop-filter:blur(18px);border-top:1px solid #ffffff20;padding:13px max(24px,calc((100vw - 1120px)/2))}
+.player-row{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}.current{min-width:180px;max-width:310px}.controls{display:flex;align-items:center;gap:13px}.round{border:0;border-radius:50%;width:39px;height:39px;background:#ffffff16;color:white;cursor:pointer;font-size:16px}.round.primary{background:#e57bbd;color:#151022}.progress{display:flex;gap:15px;align-items:center;margin-top:8px;color:#9ea8c4;font-size:12px}.progress input{width:100%;accent-color:#e57bbd}.volume{display:flex;align-items:center;gap:8px}.volume input{width:85px;accent-color:#e57bbd}
+small{color:#9da6c5}a{color:#eca1d9}
+@media(max-width:650px){.volume{display:none}.player-row{justify-content:center}.current{width:100%;max-width:none;text-align:center}.hero{padding:26px 22px}.track{grid-template-columns:46px minmax(0,1fr) auto}.cover{width:46px;height:46px}}
+</style></head><body>
+<header><div><div class="brand">✦ 星音<span>档案</span></div><div class="sub">ANIME MUSIC ARCHIVE · 收藏每一个心动的旋律</div></div><a href="https://github.com/tyqittle/anime-music-library">GitHub 仓库 ↗</a></header>
+<main><section class="hero"><h1>你的二次元，<br>值得一座音乐宇宙。</h1><p>动画主题曲、游戏原声、Vocaloid 与同人音乐，都能在这里整理、搜索和播放。<br>选择本地歌曲即可试听；将有授权的音频上传到 GitHub 后，还能形成可分享的在线曲库。</p>
+<div class="actions"><label class="button accent" for="files">＋ 本地试听音乐</label><input id="files" type="file" accept="audio/*" multiple hidden><a class="button" href="https://github.com/tyqittle/anime-music-library/tree/main/data">管理在线曲库 ↗</a></div></section>
+<div class="toolbar"><div class="chips" id="chips"></div><input id="search" type="search" placeholder="搜索歌曲 / 歌手 / 作品"></div>
+<div class="stats" id="stats"></div><div class="tracks" id="tracks"></div>
+</main>
+<div class="player"><div class="player-row"><div class="current"><div class="title" id="nowTitle">尚未选择音乐</div><div class="meta" id="nowArtist">从曲库中选择一首歌曲</div></div>
+<div class="controls"><button class="round" id="prev" aria-label="上一首">⏮</button><button class="round primary" id="play" aria-label="播放或暂停">▶</button><button class="round" id="next" aria-label="下一首">⏭</button><button class="round" id="repeat" title="单曲循环">↻</button></div>
+<div class="volume">音量 <input id="volume" type="range" min="0" max="1" step=".01" value=".8"></div></div>
+<div class="progress"><span id="elapsed">0:00</span><input id="seek" type="range" min="0" max="100" step=".1" value="0" aria-label="播放进度"><span id="duration">0:00</span></div><audio id="audio" preload="metadata"></audio></div>
+<script>
+const categories=['全部','动画 OP/ED','游戏 OST','Vocaloid','同人音乐','纯音乐','其他'];
+const $=id=>document.getElementById(id),audio=$('audio');let tracks=[],active='全部',query='',index=-1,loop=false,localUrls=[];
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function filtered(){return tracks.map((t,i)=>({...t,i})).filter(t=>(active==='全部'||t.category===active)&&[t.title,t.artist,t.series].join(' ').toLowerCase().includes(query))}
+function render(){ $('chips').innerHTML=categories.map(c=>'<button class="chip '+(c===active?'active':'')+'" data-category="'+esc(c)+'">'+esc(c)+'</button>').join('');
+const list=filtered();$('stats').textContent='共 '+tracks.length+' 首 · 当前显示 '+list.length+' 首';
+$('tracks').innerHTML=list.length?list.map(t=>'<div class="track '+(index===t.i?'active':'')+'" data-index="'+t.i+'" role="button" tabindex="0"><div class="cover">♫</div><div><div class="title">'+esc(t.title)+'</div><div class="meta">'+esc(t.artist||'未知歌手')+' · '+esc(t.series||t.category||'未分类')+'</div></div><span style="color:#e69fda">▶</span></div>').join(''):'<div class="empty"><strong>'+(tracks.length?'没有找到匹配的歌曲':'曲库已经准备好，还没有收录歌曲')+'</strong>'+(tracks.length?'试试其他搜索词或分类':'点击上方「本地试听音乐」导入音频，或向 GitHub 上传已授权的音乐文件，并更新 data/tracks.json。')+'</div>';
+document.querySelectorAll('.track').forEach(el=>{el.onclick=()=>load(+el.dataset.index,true);el.onkeydown=e=>{if(e.key==='Enter')load(+el.dataset.index,true)}})}
+function fmt(n){if(!Number.isFinite(n))return '0:00';return Math.floor(n/60)+':'+String(Math.floor(n%60)).padStart(2,'0')}
+function load(i,play){if(i<0||i>=tracks.length)return;index=i;let t=tracks[i];audio.src=t.src;audio.load();$('nowTitle').textContent=t.title;$('nowArtist').textContent=[t.artist,t.series].filter(Boolean).join(' · ')||'未知歌手';render();if(play)audio.play().catch(()=>{$('nowArtist').textContent='无法播放：请检查音频路径或文件授权'})}
+function toggle(){if(index<0){if(tracks.length)load(0,true);return}audio.paused?audio.play().catch(()=>{}):audio.pause()}
+function move(dir){if(!tracks.length)return;load((index+dir+tracks.length)%tracks.length,true)}
+$('play').onclick=toggle;$('prev').onclick=()=>move(-1);$('next').onclick=()=>move(1);$('repeat').onclick=()=>{loop=!loop;audio.loop=loop;$('repeat').style.color=loop?'#ee90d0':'white'};
+audio.onplay=()=>$('play').textContent='❚❚';audio.onpause=()=>$('play').textContent='▶';audio.onended=()=>{if(!loop)move(1)};
+audio.ontimeupdate=()=>{$('elapsed').textContent=fmt(audio.currentTime);$('duration').textContent=fmt(audio.duration);$('seek').value=audio.duration?audio.currentTime/audio.duration*100:0};
+$('seek').oninput=e=>{if(audio.duration)audio.currentTime=audio.duration*(+e.target.value/100)};
+$('volume').oninput=e=>audio.volume=+e.target.value;audio.volume=.8;
+$('chips').onclick=e=>{if(e.target.dataset.category){active=e.target.dataset.category;render()}};
+$('search').oninput=e=>{query=e.target.value.toLowerCase().trim();render()};
+$('files').onchange=e=>{const files=Array.from(e.target.files).filter(f=>f.type.startsWith('audio/')||/\.(mp3|ogg|wav|flac|m4a)$/i.test(f.name));const start=tracks.length;files.forEach((f,k)=>{let src=URL.createObjectURL(f);localUrls.push(src);tracks.push({id:'local-'+Date.now()+'-'+k,title:f.name.replace(/\.[^.]+$/,''),artist:'本地文件',series:'本地试听',category:'其他',src})});active='全部';query='';$('search').value='';render();if(files.length)load(start,false)};
+window.addEventListener('beforeunload',()=>localUrls.forEach(URL.revokeObjectURL));
+fetch('data/tracks.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(d=>{tracks=(Array.isArray(d.tracks)?d.tracks:[]).filter(t=>t.title&&t.src);render()}).catch(()=>{ $('stats').textContent='在线曲库读取失败，但仍可选择本地音乐试听';render()});
+render();
+</script></body></html>
