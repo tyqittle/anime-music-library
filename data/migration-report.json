@@ -1,0 +1,49 @@
+[
+  {
+    "id": "freely-tomorrow",
+    "status": "migrated",
+    "bytes": 8676076,
+    "duration": 239,
+    "path": "music/vocaloid/freely-tomorrow.ogg"
+  },
+  {
+    "id": "determination-hydrogene",
+    "status": "failed",
+    "reason": "only 69s, likely a sample"
+  },
+  {
+    "id": "jrpg-theme-juhani",
+    "status": "migrated",
+    "bytes": 4395595,
+    "duration": 99,
+    "path": "music/game-ost/jrpg-theme-juhani.ogg"
+  },
+  {
+    "id": "end-dungeon-hydrogene",
+    "status": "migrated",
+    "bytes": 2649095,
+    "duration": 166,
+    "path": "music/game-ost/end-dungeon-hydrogene.mp3"
+  },
+  {
+    "id": "jrpg-epic-rock-full",
+    "status": "migrated",
+    "bytes": 2929387,
+    "duration": 115,
+    "path": "music/game-ost/jrpg-epic-rock-full.mp3"
+  },
+  {
+    "id": "battle-rpg-theme",
+    "status": "migrated",
+    "bytes": 6859825,
+    "duration": 171,
+    "path": "music/game-ost/battle-rpg-theme.mp3"
+  },
+  {
+    "id": "unique-boss-battle",
+    "status": "migrated",
+    "bytes": 1822336,
+    "duration": 91,
+    "path": "music/game-ost/unique-boss-battle.mp3"
+  }
+]

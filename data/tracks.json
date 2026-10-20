@@ -9,11 +9,12 @@
       "artist": "Mitchie M feat. 初音未来",
       "series": "初音未来 / Mitchie M",
       "category": "Vocaloid",
-      "src": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Freely%20Tomorrow.ogg",
+      "src": "music/vocaloid/freely-tomorrow.ogg",
       "cover": "",
       "license": "CC BY 3.0 · Mitchie M · https://creativecommons.org/licenses/by/3.0/",
       "source": "https://commons.wikimedia.org/wiki/File:Freely%20Tomorrow.ogg",
-      "duration": 239
+      "duration": 239,
+      "storage": "github-repository"
     },
     {
       "id": "determination-hydrogene",
@@ -32,10 +33,12 @@
       "artist": "Juhani Junkala / SubspaceAudio",
       "series": "原创 JRPG 主题曲",
       "category": "游戏 OST",
-      "src": "https://opengameart.org/sites/default/files/Juhani%20Junkala%20-%20JRPG%20Theme%20%5BLoop%20Ready%5D_0.ogg",
+      "src": "music/game-ost/jrpg-theme-juhani.ogg",
       "license": "CC0",
       "source": "https://opengameart.org/content/jrpg-trailer-theme",
-      "kind": "原创完整配乐（可循环）"
+      "kind": "原创完整配乐（可循环）",
+      "duration": 99,
+      "storage": "github-repository"
     },
     {
       "id": "end-dungeon-hydrogene",
@@ -43,10 +46,12 @@
       "artist": "HydroGene",
       "series": "原创 JRPG 地牢配乐",
       "category": "游戏 OST",
-      "src": "https://opengameart.org/sites/default/files/end_dungeon_0.mp3",
+      "src": "music/game-ost/end-dungeon-hydrogene.mp3",
       "license": "CC0",
       "source": "https://opengameart.org/content/jrpg-end-dungeon",
-      "kind": "原创完整配乐（可循环）"
+      "kind": "原创完整配乐（可循环）",
+      "duration": 166,
+      "storage": "github-repository"
     },
     {
       "id": "jrpg-epic-rock-full",
@@ -54,10 +59,12 @@
       "artist": "HydroGene",
       "series": "原创日式 RPG 战斗曲",
       "category": "游戏 OST",
-      "src": "https://opengameart.org/sites/default/files/jrpg_battle_full_0.mp3",
+      "src": "music/game-ost/jrpg-epic-rock-full.mp3",
       "license": "CC0",
       "source": "https://opengameart.org/content/jrpg-epic-rock-battle-theme-1",
-      "kind": "完整 Intro + Loop 版本"
+      "kind": "完整 Intro + Loop 版本",
+      "duration": 115,
+      "storage": "github-repository"
     },
     {
       "id": "battle-rpg-theme",
@@ -65,10 +72,12 @@
       "artist": "Cleyton Kauffman",
       "series": "原创 RPG 战斗音乐",
       "category": "游戏 OST",
-      "src": "https://opengameart.org/sites/default/files/CleytonRX%20-%20Battle%20RPG%20Theme_1.mp3",
+      "src": "music/game-ost/battle-rpg-theme.mp3",
       "license": "CC0",
       "source": "https://opengameart.org/content/boss-battle-theme",
-      "kind": "完整可循环音乐"
+      "kind": "完整可循环音乐",
+      "duration": 171,
+      "storage": "github-repository"
     },
     {
       "id": "unique-boss-battle",
@@ -76,10 +85,13 @@
       "artist": "haruta",
       "series": "原创日系游戏战斗配乐",
       "category": "游戏 OST",
-      "src": "https://opengameart.org/sites/default/files/unique_boss_battle_5.mp3",
+      "src": "music/game-ost/unique-boss-battle.mp3",
       "license": "CC0",
       "source": "https://opengameart.org/content/anima",
-      "kind": "完整单曲"
+      "kind": "完整单曲",
+      "duration": 91,
+      "storage": "github-repository"
     }
-  ]
+  ],
+  "migration_report": "data/migration-report.json"
 }
