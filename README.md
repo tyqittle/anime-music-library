@@ -22,15 +22,7 @@
 
 > 为避免版权问题，仓库不会自动收录未经授权的商业歌曲。外链失效或无法跨域播放时，请换成合法托管的音频文件。
 
-## 已收录音乐（2026-10-20）
-目前已添加 5 条开放许可的音频记录（其中含歌曲及短演示片段），播放来源为 Wikimedia Commons，并非存储于本仓库。
+## 已核实的完整歌曲
+- **FREELY TOMORROW** — Mitchie M feat. 初音未来；3分59秒；[CC BY 3.0，来源 Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Freely_Tomorrow.ogg)。
 
-| 音乐 | 备注 |
-|---|---|
-| FREELY TOMORROW — Mitchie M feat. 初音未来 | 完整歌曲，CC BY 3.0 |
-| かごめかごめ — 初音未来 | 传统歌曲演唱片段，参照来源页许可 |
-| LEON — Check It Out | VOCALOID 演示片段 |
-| KAITO V1 | VOCALOID 短演示 |
-| 重音テト — God Save the Queen | Synthesizer V 合成演唱录音，CC BY 4.0 |
-
-相关创作者、许可和原始来源均在 `data/tracks.json` 的 `artist`、`license` 和 `source` 字段标注。音频依赖外部托管，外部服务器或浏览器策略可能导致无法播放。如需完全独立托管，请在符合许可条件下将音频放入 `music/`，并更新 `src`。
+此前加入的 VOCALOID / Synthesizer V 演示短音频已从曲库删除。新收录必须是完整作品且具有允许公开分发的授权；单独列出处不等于取得版权许可。
