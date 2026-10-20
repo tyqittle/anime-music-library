@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updated": "2026-10-20",
-  "notes": "仅保留已核实为完整歌曲的资源。FREELY TOMORROW 原文件时长 3分59秒，许可 CC BY 3.0；其他演示音频已移除。",
+  "notes": "包含完整歌曲和原创完整游戏配乐；部分配乐专为循环播放创作。音频由 Wikimedia Commons 和 OpenGameArt 托管，网站端播放取决于外部站点响应。",
   "tracks": [
     {
       "id": "freely-tomorrow",
@@ -14,6 +14,39 @@
       "license": "CC BY 3.0 · Mitchie M · https://creativecommons.org/licenses/by/3.0/",
       "source": "https://commons.wikimedia.org/wiki/File:Freely%20Tomorrow.ogg",
       "duration": 239
+    },
+    {
+      "id": "determination-hydrogene",
+      "title": "Determination — Anime Style Music",
+      "artist": "HydroGene",
+      "series": "原创动漫风摇滚 / JRPG",
+      "category": "游戏 OST",
+      "src": "https://opengameart.org/sites/default/files/determination_1.mp3",
+      "license": "CC0",
+      "source": "https://opengameart.org/content/determination-anime-style-music",
+      "kind": "原创完整配乐（可循环）"
+    },
+    {
+      "id": "jrpg-theme-juhani",
+      "title": "JRPG Trailer / Theme",
+      "artist": "Juhani Junkala / SubspaceAudio",
+      "series": "原创 JRPG 主题曲",
+      "category": "游戏 OST",
+      "src": "https://opengameart.org/sites/default/files/Juhani%20Junkala%20-%20JRPG%20Theme%20%5BLoop%20Ready%5D_0.ogg",
+      "license": "CC0",
+      "source": "https://opengameart.org/content/jrpg-trailer-theme",
+      "kind": "原创完整配乐（可循环）"
+    },
+    {
+      "id": "end-dungeon-hydrogene",
+      "title": "JRPG — End Dungeon",
+      "artist": "HydroGene",
+      "series": "原创 JRPG 地牢配乐",
+      "category": "游戏 OST",
+      "src": "https://opengameart.org/sites/default/files/end_dungeon_0.mp3",
+      "license": "CC0",
+      "source": "https://opengameart.org/content/jrpg-end-dungeon",
+      "kind": "原创完整配乐（可循环）"
     }
   ]
 }
