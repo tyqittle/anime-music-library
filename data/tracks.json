@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updated": "2026-10-20",
-  "notes": "包含完整歌曲和原创完整游戏配乐；部分配乐专为循环播放创作。音频由 Wikimedia Commons 和 OpenGameArt 托管，网站端播放取决于外部站点响应。",
+  "notes": "收录完整歌曲及完整版日系游戏配乐；部分 JRPG 作品可循环。来源和许可附于各歌曲元数据。",
   "tracks": [
     {
       "id": "freely-tomorrow",
@@ -22,7 +22,7 @@
       "series": "原创动漫风摇滚 / JRPG",
       "category": "游戏 OST",
       "src": "https://opengameart.org/sites/default/files/determination_1.mp3",
-      "license": "CC0",
+      "license": "CC0 (OpenGameArt)",
       "source": "https://opengameart.org/content/determination-anime-style-music",
       "kind": "原创完整配乐（可循环）"
     },
@@ -47,6 +47,39 @@
       "license": "CC0",
       "source": "https://opengameart.org/content/jrpg-end-dungeon",
       "kind": "原创完整配乐（可循环）"
+    },
+    {
+      "id": "jrpg-epic-rock-full",
+      "title": "JRPG Epic Rock Battle Theme #1 (Full)",
+      "artist": "HydroGene",
+      "series": "原创日式 RPG 战斗曲",
+      "category": "游戏 OST",
+      "src": "https://opengameart.org/sites/default/files/jrpg_battle_full_0.mp3",
+      "license": "CC0",
+      "source": "https://opengameart.org/content/jrpg-epic-rock-battle-theme-1",
+      "kind": "完整 Intro + Loop 版本"
+    },
+    {
+      "id": "battle-rpg-theme",
+      "title": "Boss Battle Theme",
+      "artist": "Cleyton Kauffman",
+      "series": "原创 RPG 战斗音乐",
+      "category": "游戏 OST",
+      "src": "https://opengameart.org/sites/default/files/CleytonRX%20-%20Battle%20RPG%20Theme_1.mp3",
+      "license": "CC0",
+      "source": "https://opengameart.org/content/boss-battle-theme",
+      "kind": "完整可循环音乐"
+    },
+    {
+      "id": "unique-boss-battle",
+      "title": "Unique Boss Battle",
+      "artist": "haruta",
+      "series": "原创日系游戏战斗配乐",
+      "category": "游戏 OST",
+      "src": "https://opengameart.org/sites/default/files/unique_boss_battle_5.mp3",
+      "license": "CC0",
+      "source": "https://opengameart.org/content/anima",
+      "kind": "完整单曲"
     }
   ]
 }
